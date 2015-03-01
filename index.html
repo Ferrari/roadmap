@@ -1,211 +1,217 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>io.js Roadmap</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=792, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+  <title>io.js Roadmap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
 </head>
 <body class="list">
-	<header class="caption">
-		<h1>io.js Roadmap</h1>
-		<p>Living Document: Last edited on February 26th, 2015.</p>
-	</header>
-	<section class="slide cover" id="Cover"><div>
+  <style>
+  h2 {
+    font-size:120%;
+  }
+  li {
+    margin-left:30px;
+  }
+  </style>
+  <header class="caption">
+    <h1>io.js Roadmap</h1>
+    <p>Living Document: Last edited on February 26th, 2015.</p>
+  </header>
+  <section class="slide cover" id="Cover"><div>
     <h2>io.js 光明的未來</h2>
-    <p>由社群驅動的未來規劃</p>
-		<img src="pictures/cover.jpg" alt="">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#Cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#Cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#Cover p a {
-					color:#FFF;
-					}
-		</style>
-	</div></section>
+    <p>社群驅動的路線圖</p>
+    <img src="../pictures/cover.jpg" alt="">
+    <!--
+      To apply styles to the certain slides
+      set slide ID to get needed elements
+      -->
+    <style>
+      #Cover h2 {
+        margin:30px 0 0;
+        color:#FFF;
+        text-align:center;
+        font-size:70px;
+        }
+      #Cover p {
+        margin:10px 0 0;
+        text-align:center;
+        color:#FFF;
+        font-style:italic;
+        font-size:20px;
+        }
+        #Cover p a {
+          color:#FFF;
+          }
+    </style>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>For the community, by the community</h2>
+  <section class="slide"><div>
     <h2>社群擁有，社群管理</h2>
-		<p><strong>io.js</strong> is a drop-in replacement for node.js and is compatible with nearly all the modules in <strong>npm</strong>.
-		<p><strong>io.js</strong> is a drop-in replacement for node.js and is compatible with nearly all the modules in <strong>npm</strong>.
-		</p>
-		<p><strong>io.js</strong> is a community driven open source project. It was started by the primary contributors to node.js but in the first few months attracted more active developers than the node.js project has had in its entire history.</p>
+    <p><strong>io.js</strong> 是 node.js 的替代品，可互換，並且幾乎兼容 <strong>npm</strong> 中的所有模組。
+    </p>
+    <p><strong>io.js</strong> 是一個社群驅動的開源專案，是由 node.js 的主要貢獻者發起的，並且在最初的幾個月間吸引了比 node.js 出現以來更多的活躍開發者。</p>
 
-	</div></section>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>What do people want from io.js?</h2>
-		<ol>
-			<li>Stability</li>
-			<li>Transparency (Debugging and Tracing)</li>
-			<li>Better Streams</li>
-			<li>Long Term Support</li>
-			<li>Embrace Ongoing Standards</li>
-			<li>Localization</li>
-		</ol>
-		<p class="note">Concerns list compiled from the <a href="https://github.com/iojs/roadmap">roadmap</a> project. Contributors welcome!</p>
-	</div></section>
+  <section class="slide"><div>
+    <h2>從 io.js 能得到什麼?</h2>
+    <ol>
+      <li>穩定性</li>
+      <li>透明性 (調試和追蹤)</li>
+      <li>更好的 Streams</li>
+      <li>長期支持</li>
+      <li>擁抱標準</li>
+      <li>本地化</li>
+    </ol>
+    <p class="note">相關列表編輯自 <a href="https://github.com/iojs/roadmap">roadmap</a> 項目，歡迎貢獻者!</p>
+  </div></section>
 
-	<section class="slide"><div style="padding-top:50px;">
-		<h2>Stability Policy</h2>
-		<blockquote>
-			<p>We have the largest package ecosystem of any language, we can't break it.</p>
-		</blockquote>
-		<ul>
-			<li>We do not remove JS API.</li>
-			<li><a href="http://semver.org">Semantic Versioning</a>
-				<ul>
-					<li>Any API addition means a <em>minor</em> version increment.</li>
-					<li>Changes in V8's C++ API handled by <a href="https://github.com/rvagg/nan"><code>nan</code></a> mean a <em>minor</em> version increment and a <em>major</em> increment if they cannot.</li>
-				</ul>
-			</li>
-		</ul>
-			<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a> section of the Roadmap. Contributors welcome!</p>
-	</div></section>
+  <section class="slide"><div style="padding-top:50px;">
+    <h2>穩定性策略</h2>
+    <blockquote>
+      <p>在各種語言中我們擁有最大的模組生態系統，我們不能毀了它。</p>
+    </blockquote>
+    <ul>
+      <li>不會移除 JS API.</li>
+      <li><a href="http://semver.org">語義化版本</a>
+        <ul>
+          <li>添加 API 會增加 <em>minor</em> 版本</li>
+          <li>如果 V8 的 C++ API 的變化能被 <a href="https://github.com/rvagg/nan"><code>nan</code></a> 兼容，則增加 <em>minor</em> 版本，否則增加 <em>major</em> 版本。</li>
+        </ul>
+      </li>
+    </ul>
+      <p class="note">來自路線圖的 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">穩定性策略</a> 章節，歡迎貢獻者!</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Channels</h2>
-		<table>
-		<tr>
-			<th scope="row">Release</th>
-			<td>Any versioned build.<br> <strong>Must be stable and ready for production</strong>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Canary</th>
-			<td>Nightly builds with Canary V8 & other new features.</td>
-		</tr>
-		<tr>
-			<th scope="row">NG</th>
-			<td>Next Generation ES6/7 centric API.</td>
-		</tr>
-		</table>
-		<br>
-		<br>
-		<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Contributors welcome!</p>
-	</div></section>
+  <section class="slide"><div>
+    <h2>Channels</h2>
+    <table>
+    <tr>
+      <th scope="row">Release</th>
+      <td>任何被標記版本都會編譯<br> <strong>必須穩定且可用於線上環境</td>
+    </tr>
+    <tr>
+      <th scope="row">Canary</th>
+      <td>每晚編譯，包含 Canary V8 及其他新特性</td>
+    </tr>
+    <tr>
+      <th scope="row">NG</th>
+      <td>可使用下一代 ES6/7 核心 API.</td>
+    </tr>
+    </table>
+    <br>
+    <br>
+    <p class="note">來自 <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">路線圖</a>，歡迎貢獻者!</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>NG (Next Generation)</h2>
+  <section class="slide"><div>
+    <h2>NG (Next Generation)</h2>
 
-		<ul>
-			<li>A new platform for modern JavaScript Applications.</li>
-			<li>Will remain backward compatible indefinitely.</li>
-			<li>New APIs can be ES6/7 centric without breaking old modules and API.</li>
-			<li>Separates work on future API from improvements to the current platform.</li>
-		</ul>
-		<br>
-		<p class="note">NG discussions are ongoing in the <a href="https://github.com/iojs/ng">NG repo</a>.</p>
-	</div></section>
+    <ul>
+      <li>現代 JavaScript 應用的一個新平台</li>
+      <li>將會一直保持向下兼容</li>
+      <li>新的 API 將會以 ES6/7 為中心，但會兼容原來的模組和 API</li>
+      <li>將會把對於現在平台的改善和對未來 API 的工作區分開</li>
+    </ul>
+    <br>
+    <p class="note">NG 討論還在持續進行中 <a href="https://github.com/iojs/ng">NG 程式庫</a></p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Debugging & Tracing</h2>
-		<blockquote>
-			<p>Core should enable a massive and diverse ecosystem of debugging and tracing tools rather than endorse high level abstractions like <code>domains</code>.</p>
-		</blockquote>
-		<ul>
-			<li>Integrate with <code>trace_event</code> (New trace API for V8 & Chrome).</li>
-			<li>Document and evangelize a debugging ecosystem.</li>
-			<li>Unify system tracing endpoint (DTrace, LTTng, etc)</li>
-		</ul>
-		<p class="note">Work being lead by the <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Contributors welcome!</p>
-	</div></section>
+  <section class="slide"><div>
+    <h2>除錯和追蹤</h2>
+    <blockquote>
+      <p>應該在核心使用大量且多樣化的除錯和追蹤工具，而不是提供高層級的抽象，如 <code>domains</code></p>
+    </blockquote>
+    <ul>
+      <li>集成 <code>trace_event</code> (V8 和 Chrome 的新 trace API).</li>
+      <li>添加文件和宣傳這種調試生態系統</li>
+      <li>統一系統追蹤終端 (DTrace, LTTng, etc)</li>
+    </ul>
+    <p class="note">由<a href="https://github.com/iojs/tracing-wg">追蹤工作組</a>領導，歡迎貢獻者!</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Streams</h2>
-		<ul>
-			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code>, which is now the official io.js <code>stream</code> module.</li>
-			<li>Fix all existing compatibility issues.</li>
-      <li>Simplify stream creation to avoid user error.</li>
-			<li>Explore <a href="https://github.com/whatwg/streams">WHATWG Streams</a> interface and identify compatibility issues.</li>
-			<li>Improve stream performance.</li>
-		</ul>
-		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
-	</div></section>
+  <section class="slide"><div>
+    <h2>Streams</h2>
+    <ul>
+      <li><strong>Streams 工作組</strong> 已經接管了 <code>readable-stream</code>，它已經成為了 io.js 官方 <code>stream</code> 模塊</li>
+      <li>解決所有現存的兼容問題</li>
+      <li>簡化生成 stream，避免造成用戶使用錯誤</li>
+      <li>探索 <a href="https://github.com/whatwg/streams">WHATWG Streams</a> 接口，識別兼容性問題</li>
+      <li>提升 stream 性能</li>
+    </ul>
+    <p class="note">由 <a href="https://github.com/iojs/readable-stream">Streams 工作組</a>領導，歡迎貢獻者!</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Long Term Support</h2>
+  <section class="slide"><div>
+    <h2>長期支持</h2>
 
-		<ul>
-			<li>New release lines will ship with stable and supported dependencies.</li>
-			<li>Patch releases of older versions will be published for as long as people are actively contributing.</li>
-			<li>io.js will take responsibility for old versions of dependencies like V8 that appear in prior releases when their maintainers stop supporting them.</li>
-		</ul>
-		<br>
-		<p class="note">Summary from <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a>. Contributors welcome!</p>
-	</div></section>
+    <ul>
+      <li>新的發佈將會和穩定及所支持的依賴一起發佈</li>
+      <li>只要有人一直積極的貢獻，老版本依然會發佈 patch 版本。</li>
+      <li>如果依賴庫（如 V8）的維護者停止支持老版本，在以前的發佈中出現過，io.js 將會對此負責</li>
+    </ul>
+    <br>
+    <p class="note">從<a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">穩定性策略</a>總結，歡迎貢獻!</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Localization</h2>
+  <section class="slide"><div>
+    <h2>本地化</h2>
 
-		<ul>
-			<li>Reduce impact of including <code>icu</code> (binary and memory footprint).</li>
-			<li>Foster a vibrant localization community.</li>
-				<ul>
-					<li>Autonomous language communities (30+ registered so far)</li>
-					<li>Evangelism efforts to grow membership (160+ members so far)</li>
-					<li>Improve tooling for translating website, API docs, installers and slide decks.</li>
-				</ul>
-		</ul>
-		<p class="note">You can get involved by <a href="https://github.com/iojs/website/issues/125">joining the community for your language</a> :)</p>
-	</div></section>
+    <ul>
+      <li>減少引入 <code>icu</code> 的影響 (二進制和內存佔用空間).</li>
+      <li>推進充滿活力的本地化社區的發展</li>
+        <ul>
+          <li>自主性的語言社群 (到現在已經有 30+)</li>
+          <li>宣傳以增加成員人數 (到現在已經有 160+ 人)</li>
+          <li>優化工具，支持翻譯站點，API 文件，安裝器，PPT</li>
+        </ul>
+    </ul>
+    <p class="note">如果你想加入本地化社群請到 <a href="https://github.com/iojs/website/issues/125">這裡留言</a> :)</p>
+  </div></section>
 
-	<section class="slide"><div>
-		<h2>Get Involved!</h2>
+  <section class="slide"><div>
+    <h2>Get Involved!</h2>
 
-		<table>
-		<tr>
-			<th></th>
-			<th scope="column">Core</th>
-			<th scope="column">Ecosystem</th>
-			<th scope="column">Community</th>
-		</tr>
-		<tr>
-			<th>Code</th>
-			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
-			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
-			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
-		</tr>
-		<tr>
-			<th>Evangelism</th>
-			<td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
-			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
-			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
-		</tr>
-		<tr>
-			<th>i18n</th>
-			<td>ICU</td>
-			<td><a href="https://github.com/iojs/io.js/issues/695">doc tooling</a></td>
-			<td><a href="https://github.com/iojs/website/issues/125">join a language<br>community</a></td>
-		</tr>
-		</table>
+    <table>
+    <tr>
+      <th></th>
+      <th scope="column">Core</th>
+      <th scope="column">Ecosystem</th>
+      <th scope="column">Community</th>
+    </tr>
+    <tr>
+      <th>Code</th>
+      <td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+      <td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+      <td><a href="https://github.com/iojs/website">iojs/website</a></td>
+    </tr>
+    <tr>
+      <th>Evangelism</th>
+      <td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
+      <td><a href="http://nodeschool.io/">NodeSchool</a></td>
+      <td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+    </tr>
+    <tr>
+      <th>i18n</th>
+      <td>ICU</td>
+      <td><a href="https://github.com/iojs/io.js/issues/695">doc tooling</a></td>
+      <td><a href="https://github.com/iojs/website/issues/125">join a language<br>community</a></td>
+    </tr>
+    </table>
 
-	</div></section>
+  </div></section>
 
-	<p class="badge"><a href="https://github.com/iojs/roadmap">Fork me on Github</a></p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"><div></div></div>
-	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+  <p class="badge"><a href="https://github.com/iojs/roadmap">Fork me on Github</a></p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove 「progress」 element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="../shower/shower.min.js"></script>
+  <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
